@@ -1,0 +1,17 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+    overflow-x: hidden;
+}
+.row{
+	/*justify-content: center;*/
+	background-color: lightblue;
+	height: 500px;
+
+}
+body .height{
+	height: 200px;
+	transform: rotate(45deg);
+}

@@ -1,0 +1,151 @@
+*{margin: 0; padding: 0;
+}
+.top{
+	overflow: hidden;
+}
+.top ul li .icon{
+	font-size: 20px;
+	top: 15px;
+	right: 10px;
+}
+ul li{
+	list-style: none;
+}
+ul li a{
+	color: gray;
+	font-weight: bold;
+}
+.bb{
+	border-bottom: 1px solid gray;
+}
+p.title{
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+p.text{
+	font-size: 16px;
+	color: white;
+}
+.top .card{
+	overflow: hidden;
+	position: relative;
+	background-image: url(2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 300px;
+	margin: 0;
+}
+.top .card-list {
+	background-image: none;
+}
+.top .card .den, .content .den{
+	width: 100%;
+	background-color: #000000b0;
+	height: 100%;
+}
+.top .card .comment{
+	position: absolute;
+	margin-left: 20px;
+	color: white;
+	bottom: 0px;
+	left: 16px;
+}
+.top .atica{
+	padding-bottom: 20px;
+	border-bottom: 1px solid gray;
+}
+.clear{
+	clear: both;
+}
+.wrapper .content{
+	margin-top: 20px;
+}
+.content .sideBar .anh{
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+	background-image: url(2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.content .sideBar .den{
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+	z-index: 2;
+}
+.content .sideBar .card-body{margin-top: 75%;}
+.footer .logo{
+	background-image: url('logo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 70px;
+	width: 285px;
+}
+/*phan an hien menu*/
+.xoaDi{
+	display: none!important;
+	transition: 0.3s;
+}
+.xoaDi.hien{
+	display: block!important;
+	transition: 0.3s;
+
+}
+.navBar{
+	display: block!important;
+	transition: 0.3s;
+
+}
+.navBar.an{
+	display: none!important;
+	transition: 0.3s;
+
+}
+@media (min-width: 0px){
+	.bb{
+	border-bottom: none;
+}
+	.menu{
+		transition: scale(0);
+	display: none;
+	transform: translateY(-700px)!important;
+	visibility: hidden;
+	transition: 0.5s;
+}
+}
+@media (min-width: 768px){
+	.bb{
+	border-bottom: 1px solid gray;
+}
+	.xoaDi.hien{
+	display: none!important;
+	transition: 0.3s;
+}
+.navBar{
+	display: none!important;
+	transition: 0.3s;
+
+}
+.menu{
+	display: block;
+	transform: translateY(0px)!important;
+	opacity: 1!important;
+	visibility: visible;
+	transition: 0.5s;
+}
+}
+.menu.dira{
+	display: block;
+	transform: scale(1);
+	transform: translateY(0px)!important;
+	opacity: 1!important;
+	visibility: visible;
+	transition: 0.5s;
+}
+/*ket thuc phan an hien menu*/
+

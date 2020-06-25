@@ -1,0 +1,40 @@
+.wrapper{
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    .trai, .phai, .giua{
+        background-color: darkred;
+        width: 33%;
+        height: 300px;
+    }
+}
+@media (max-width: 1200px){
+    .trai{
+        background-color: red;
+    }
+    .giua{
+        background-color: blue;
+    }
+    .phai{
+        background-color: yellow;
+    }
+}
+@media (max-width: 750px){
+    .trai{
+        background-color: blue;
+    }
+    .giua{
+        background-color: red;
+    }
+    .phai{
+        background-color: yellow;
+    }
+}
+@media(max-width:500px){
+    .wrapper{
+        display: block;
+    }
+    .trai, .phai, .giua{
+        width: 100%;
+    }
+}

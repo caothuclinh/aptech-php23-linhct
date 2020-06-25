@@ -1,0 +1,35 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.sign{
+  width: 500px;
+  margin: 0px auto;
+  height: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+.sign .logo{
+    font-size: 86px;
+    color: #560a69;
+}
+
+.sign h2.text {
+    font-size: 33px;
+}
+.sign .mg{
+  margin: 0px;
+}
+.sign .mb{
+  margin-top: 6px;
+}
+.sign form .wh, .wh1{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+}
+.sign form .wh1{
+  border-radius: 0 0 5px 5px;
+}

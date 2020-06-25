@@ -1,0 +1,1 @@
+UPDATE users SET `user_name` = 'thuc linh', `pass` = md5('888') WHERE id_user =4;

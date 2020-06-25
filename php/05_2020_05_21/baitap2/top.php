@@ -1,0 +1,1 @@
+<h2>giai phuong trinh bac 2</h2>

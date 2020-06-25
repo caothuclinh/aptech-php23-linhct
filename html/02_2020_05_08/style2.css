@@ -1,0 +1,60 @@
+*{
+			margin:0;
+			padding:0;
+		}
+		html, body, .container, .row{
+			height: 100%;
+		}
+		.container{
+			box-sizing: border-box;
+			background: darkred;
+		}
+		.container .row{
+			display: flex;
+			justify-content: space-between;
+			background: #2c6;
+		}
+		.container .row .col{
+			background: #90d;
+			width: 400px;
+			height: 100%;
+		}
+		.container .row .col:before, .container .row .col:after{
+			content: "hello word";
+			color: white;
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+			padding:20px 0;
+			display: block;
+			background: #723;
+			cursor: pointer;
+			border-radius: 60px;
+			margin-top: 10px;
+		}
+		.container .row .col:after{
+			background: #90a;
+			content: "I am Thuc Linh!";
+		}
+		.container .row .col:nth-child(2){
+			background: darkblue;
+		}
+		.container .row .col:nth-child(3){
+			background: #d65;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

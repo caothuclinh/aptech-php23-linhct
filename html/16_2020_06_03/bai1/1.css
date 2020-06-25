@@ -1,0 +1,56 @@
+*{margin: 0; padding: 0;
+}
+p{
+	font-size: 22px;
+	font-weight: bold;
+	color: black;
+}
+p small{
+	color: gray;
+	font-size: 16px!important;
+}
+.top .header{
+	height: 50px;
+}
+.top .star{
+	font-weight: bold;
+	line-height: 50px;
+}
+.top .info{
+	height: 400px;
+	background-image: url(2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.top .signUp {
+	top: 150px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.content .imager{
+	background-image: url(2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 350px;
+}
+.content .line{
+	margin-top: 150px!important;
+}
+.content .info{
+	height: 400px;
+	background-image: url(2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.content .signUp{
+	position: absolute!important; 
+	top: 150px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.footer{
+	height: 100px;
+}
+.footer .iconf{
+	font-size: 30px;
+}

@@ -1,0 +1,15 @@
+*{margin: 0; padding: 0;
+} 
+.wrapper{
+	background: lime;
+	padding: 10px 30px;
+}
+.height{
+	height: 90px;
+}
+.cao{
+	height: 70px;
+}
+.sm{
+	height: 180px;
+}

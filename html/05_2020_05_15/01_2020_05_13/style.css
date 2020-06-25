@@ -1,0 +1,110 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	border-radius: 5px;
+	font:100% Courier New;
+}
+
+.footter {
+    margin: 20px 0px;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.footter p {
+    line-height: 24px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+article.tren {
+    margin-bottom: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+article.tren .phai {
+    border: 1px solid white;
+    width: 100%;
+    padding: 24px 13px;
+    box-sizing: border-box;
+}
+
+article.tren .phai p {
+    font-size: 16px;
+    line-height: 31px;
+}
+
+article.tren .trai {
+    width: 100%;
+}
+
+article.tren .trai ul {
+    margin-left: 22px;
+}
+
+article.tren .trai ul li {
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+article.tren .trai ul li a {
+    text-decoration: none;
+    color: lime;
+    transition: 0.2s;
+}
+
+article.tren .trai ul li:hover > a {
+    color: white;
+}
+
+.top {
+    margin-bottom: 20px;
+}
+.wrapper{
+	width: 1000px;
+	margin: 10px auto;
+	height: auto;
+	background: black;
+	color: lime;
+	font-family: segoe ui;
+	padding: 20px;
+	box-sizing: border-box;
+	padding-bottom: 90px;
+}
+
+article.duoi h2 {
+    font-size: 41px;
+    margin-bottom: 21px;
+    font-weight: bold;
+}
+
+article.duoi p {
+    font-size: 19px;
+    line-height: 30px;
+}
+
+article.duoi h3 {
+    font-size: 30px;
+    margin: 20px 0px;
+    font-weight: bold;
+}
+
+article.duoi a {
+    color: white;
+}
+
+article.duoi a:hover {
+    color: lime;
+}
+.wrapper .top h1{
+	font-size: 50px;
+	font-weight: bold;
+}
+.wrapper .top p{
+	font-size: 26px;
+}

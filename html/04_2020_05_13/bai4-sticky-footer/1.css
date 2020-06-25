@@ -1,0 +1,32 @@
+*{margin: 0; padding: 0;} 
+html{
+	height: 100%;
+}
+body{
+	overflow: hidden;
+	height: 100%;
+}
+.top{
+	padding-top: 80px;
+	z-index: 2;
+	overflow: hidden;
+}
+.top h2{
+	font-size: 40px;
+}
+.top p.para1{
+	font-size: 19px;
+	color: #000000b0;
+}
+footer{
+	height: 60px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	margin-top: 50%;
+	line-height: 60px;
+	background: #ccc;
+}
+footer p{
+	color: #000000b0;
+}

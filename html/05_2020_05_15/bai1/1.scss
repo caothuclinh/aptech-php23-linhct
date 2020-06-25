@@ -1,0 +1,46 @@
+$color-red: darkred;
+$font1 :  serif;
+$padding1: 20px 30px;
+ul{
+    display: block;
+    background-color: #000;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    li{
+        list-style: none;
+        display: inline-block;
+        
+        a{
+            color: #c6666c;
+            font-size: 30px;
+            line-height: 50px;
+            
+        }
+    }
+}
+.wrapper{
+    height: 500px;
+    width: 900px;
+    margin: 0 auto;
+    background-color: limegreen;
+    padding: $padding1;
+    .h1{
+        color: white;
+    }
+    .footer{
+        color: $color-red;
+        font-family: $font1;
+        text-transform: uppercase;
+    }
+}
+.boder{
+    width: 200px;
+    height: 100px;
+    background-color: darkgoldenrod;
+    border-radius: 10px 20px 30px;
+    margin-left: 100px;
+}
+.boder:hover{
+    transform: rotate(50deg) ;
+}

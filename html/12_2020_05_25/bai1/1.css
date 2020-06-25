@@ -1,0 +1,18 @@
+*{margin: 0; padding: 0;}
+.js01{
+	display: none;
+}
+#toi{
+	transform: translateX(-55px);
+opacity: 0;
+}
+.dentoi{
+	opacity: 1!important;
+}
+#sang{
+	transform: translateX(50px);
+	opacity: 1;
+}
+.densang{
+	opacity: 0!important;
+}

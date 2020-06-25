@@ -1,0 +1,110 @@
+*{margin: 0; padding: 0;
+}
+.top{
+	margin-bottom: 150px;
+
+}
+.top .about{
+	color: white;
+	transition: 0.4s;
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	height: 200px;
+}
+.top .about ul li{
+	list-style: none;
+}
+.top .about ul li a{
+	color: white;
+	font-size: 14px;
+}
+/*hieu ung chuyen dong*/
+.top .auto{
+	margin-top: -200px;
+	transition: 0.4s;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+.top .nav{
+	transform: translateY(0px);
+	height: 50px;
+	margin-bottom: 130px;
+	background-color: #343a40;
+	color: white;
+	margin-top: 200px;
+	transition: 0.4s;
+}
+.top .mt{
+	margin-top: 0px!important;
+	transition: 0.4s;
+}
+.top .nav .logo{
+	line-height: 50px;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.top .nav .menu{
+	font-size: 33px;
+	float: right;
+	cursor: pointer;
+	line-height: 50px;
+	color: #ffffff73;
+}
+.content{
+	width: 100%;
+	height: auto;
+	background-color: #928d8d12!important;
+}
+.content .tren{
+	height: 230px;
+	background-color: gray;
+}
+.content .tren p{
+	line-height: 200px;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+}
+.content .duoi .nut{
+	display: flex;
+}
+.content .duoi .nut .view{
+	border: 1px solid #15151759;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.content .duoi .nut .view:hover{
+	background-color: #15151759;
+
+}
+.content .duoi .nut .edit{
+    border: 1px solid #15151759;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.content .duoi .nut .edit:hover{
+	background-color: #15151759;
+
+}
+.content .duoi .nut a{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-decoration: none;
+	color: gray;
+	padding-left: 4px;
+	padding-right: 5px;
+	transition: 0.2s;
+}
+.content .duoi .nut a:hover{
+	color: white;
+	background-color: #15151759;
+}
+.footer{
+	height: 100px;
+	margin-top: 30px;
+}

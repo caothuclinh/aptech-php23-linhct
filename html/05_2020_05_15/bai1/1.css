@@ -1,0 +1,50 @@
+ul {
+  display: block;
+  background-color: #000;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+ul li a {
+  color: #c6666c;
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.wrapper {
+  height: 500px;
+  width: 900px;
+  margin: 0 auto;
+  background-color: limegreen;
+  padding: 20px 30px;
+}
+
+.wrapper .h1 {
+  color: white;
+}
+
+.wrapper .footer {
+  color: darkred;
+  font-family: serif;
+  text-transform: uppercase;
+}
+
+.boder {
+  width: 200px;
+  height: 100px;
+  background-color: darkgoldenrod;
+  border-radius: 10px 20px 30px;
+  margin-left: 100px;
+}
+
+.boder:hover {
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+/*# sourceMappingURL=1.css.map */

@@ -1,0 +1,22 @@
+*{margin: 0; padding: 0;}
+ul li{
+	list-style: none;
+	font-size: 14px;
+}
+ul li a{
+	color: gray;
+	text-decoration: none;
+}
+.wrapper .top .container {
+	padding-bottom: 20px;
+	border-bottom: 1px solid gray;
+}
+.card-wrold .wh{
+	width: 200px;
+	height: 250px;
+	line-height: 250px;
+}
+.from .head{
+	padding-bottom: 20px;
+	border-bottom: 1px solid gray;
+}

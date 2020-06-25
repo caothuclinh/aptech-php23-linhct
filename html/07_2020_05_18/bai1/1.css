@@ -1,0 +1,48 @@
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+}
+
+.wrapper .trai, .wrapper .phai, .wrapper .giua {
+  background-color: darkred;
+  width: 33%;
+  height: 300px;
+}
+
+@media (max-width: 1200px) {
+  .wrapper .trai {
+    background-color: red;
+  }
+  .wrapper .giua {
+    background-color: blue;
+  }
+  .wrapper .phai {
+    background-color: yellow;
+  }
+}
+
+@media (max-width: 750px) {
+  .wrapper .trai {
+    background-color: blue;
+  }
+  .wrapper .giua {
+    background-color: red;
+  }
+  .wrapper .phai {
+    background-color: yellow;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    display: block;
+  }
+  .wrapper .trai, .wrapper .phai, .wrapper .giua {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=1.css.map */

@@ -1,0 +1,6 @@
+USE aptechphp23_linhct;
+CREATE TABLE users(
+	id_user INT(10) PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(255) UNIQUE,
+	pass VARCHAR(255)
+) ENGINE INNODB;
