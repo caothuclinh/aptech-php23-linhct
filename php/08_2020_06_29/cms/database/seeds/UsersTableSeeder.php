@@ -4,7 +4,8 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-class ArticleTableSeeder extends Seeder
+
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,14 +16,12 @@ class ArticleTableSeeder extends Seeder
     {
         //
         $faker = Faker\Factory::create();
-        for($i=0; $i<10;$i++){
-
-        DB::table('article')->insert([
-        	'title' => $faker->bs,
-        	'description' => $faker->text(100),
-        	'content' => $faker->paragraphs(3,50)
-        ]);    
-        }
-
+        for($i=0; $i<10; $i++){
+	        DB::table('users')->insert([
+	            'name' => $faker->name(10),
+	            'email' => $faker->email(10).'@gmail.com',
+	            'password' => Hash::make('password')
+	        ]);
+    	}
     }
 }
