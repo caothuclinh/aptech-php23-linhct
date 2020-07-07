@@ -9,7 +9,4 @@ class UserOne extends Model
 {
     //
     protected $table = "users";
-    public function user(){
-    	return $this->$table->select('id','name');
-    }
 }

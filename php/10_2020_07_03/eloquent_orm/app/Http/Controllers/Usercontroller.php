@@ -7,7 +7,7 @@ class Usercontroller extends Controller
 {
     //
     public function show(){
-    	$table = new userOne::All()->ToArray();
+    	$table = userOne::All();
     	return view('show',['user' => $table]);
     }
 }

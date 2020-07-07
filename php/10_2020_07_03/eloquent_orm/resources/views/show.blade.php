@@ -8,16 +8,20 @@
 
 	<table border="1">
 		<tr>
-	@foreach ($user as $key => $value) @endforeach
-		@foreach ($value as $key1 => $value1)
-			<th><?=$key1?></th>
-		@endforeach
+			<th>id</th>
+			<th>Tên</th>
+			<th>Email</th>
+			<th colspan="2">truy van</th>
 		</tr>
-		@foreach ($user as $key => $value)
+		{{-- {{ dd($user) }} --}}
+		@foreach ($user as $key)
 			<tr>
-			@foreach ($value as $key1 =>$value1)
-				<td><?=$value1?></td>
-			@endforeach
+				{{-- {{ dd($key) }} --}}
+				<td>{{ $key->id }}</td>
+				<td>{{ $key->name }}</td>
+				<td>{{ $key->email }}</td>
+				<td><a href="">xem chi tiết</a></td>
+				<td> <a href="">xoa</a></td>
 			</tr>
 		@endforeach
 	</table>
