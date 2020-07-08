@@ -28,6 +28,6 @@ Route::group(['prefix' => 'users'],function(){
 	Route::PATCH('update/{user}','UserController@update');
 	// them người dùng mới
 	Route::get('create','UserController@create');
-	Route::post('store','UserController@store');
+	Route::PATCH('store','UserController@store');
 
 });

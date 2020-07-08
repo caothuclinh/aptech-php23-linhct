@@ -14,14 +14,14 @@
     </div>
 @endif
 <form action="users/store" method="post">
-	@method('POST')
+	@method('PATCH')
 	@csrf
 	<fieldset class="form-group">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<label for="exampleInputEmail1">name</label>
 		<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name" name="name">
 		<label for="exampleInputEmail1">Email address</label>
-		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email">
+		<input class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email">
 		<label for="exampleInputEmail1">password</label>
 		<input type="password" class="form-control" id="exampleInputEmail1" placeholder="Enter password" name="pass">
 		

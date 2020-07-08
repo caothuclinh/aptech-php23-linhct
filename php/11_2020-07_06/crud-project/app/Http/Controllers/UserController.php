@@ -46,23 +46,25 @@ class UserController extends Controller
             $request,
             [
                 'name' => 'required|unique:users,name|min:3|max:50',
-                'email' => 'required|unique:users,email|min:3|max:50',
-                'pass' => 'required|min:3|max:100'
+                'email' => 'required|unique:users,email|email|min:3|max:50',
+                'pass' => 'required|min:6|max:100'
             ],
             [
-                'name.required' => 'ban chua nhap ten',
-                'name.unique' => 'ten da ton tai',
+                // 'name.alpha' => 'chỉ được sử dụng ký tự alpha', 
+                'name.required' => 'bạn chưa nhập tên',
+                'name.unique' => 'tên đã tồn tại',
                 'name.min' => 'ten nguoi dung phai tu 3 den 50 ky tu',
                 'name.max' => 'ten nguoi dung phai tu 3 den 50 ky tu',
 
                 'emai.required' => 'ban chua nhap emai',
                 'emai.unique' => 'email da ton tai',
+                'email.email' => 'vui long su dung dinh dang nhu exp@gmail',
                 'email.min' => 'email phai tu 3 den 50 ky tu',
                 'email.max' => 'email phai tu 3 den 50 ky tu',
 
                 'pass.required' => 'ban chua nhap password',
-                'pass.min' => 'password phai tu 3 den 100 ky tu',
-                'pass.max' => 'password phai tu 3 den 100 ky tu'
+                'pass.min' => 'password phai tu 5 den 100 ky tu',
+                'pass.max' => 'password phai tu 5 den 100 ky tu',
                 
             ]);
         $user = new User;
@@ -115,11 +117,12 @@ class UserController extends Controller
         $this->validate(
             $request,
             [
-                'name' => 'required|unique:users,name|min:3|max:50',
-                'email' => 'required|unique:users,email|min:3|max:50',
-                'pass' => 'required|min:3|max:100'
+                'name' => 'bail|required|unique:users,name|min:3|max:50',
+                'email' => 'bail|required|unique:users,email|email|min:3|max:50',
+                'pass' => 'bail|required|min:6|max:100'
             ],
             [
+                // 'name.alpha' => ' tên chỉ được sử dụng ký tự alpha', 
                 'name.required' => 'ban chua nhap ten',
                 'name.unique' => 'ten da ton tai',
                 'name.min' => 'ten nguoi dung phai tu 3 den 50 ky tu',
@@ -127,15 +130,17 @@ class UserController extends Controller
 
                 'emai.required' => 'ban chua nhap emai',
                 'emai.unique' => 'email da ton tai',
+                'email.email' => 'vui long su dung dinh dang nhu exp@gmail',
                 'email.min' => 'email phai tu 3 den 50 ky tu',
                 'email.max' => 'email phai tu 3 den 50 ky tu',
 
                 'pass.required' => 'ban chua nhap password',
-                'pass.min' => 'password phai tu 3 den 100 ky tu',
-                'pass.max' => 'password phai tu 3 den 100 ky tu'
+                'pass.min' => 'password phai tu 5 den 100 ky tu',
+                'pass.max' => 'password phai tu 5 den 100 ky tu',
                 
             ]);
         // $user = new Use;
+
         $user->name = ucwords($request->name);
         $user->email = $request->email;
         $user->pass = bcrypt($request->pass);
@@ -155,7 +160,6 @@ class UserController extends Controller
         $user = User::find($id);
         // dd($user);
         $user->delete();
-
         return redirect()->action('UserController@index')->with('section','da xoa thanh cong');
     }
 }
