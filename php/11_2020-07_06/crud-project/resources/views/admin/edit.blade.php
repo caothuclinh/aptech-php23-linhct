@@ -1,6 +1,11 @@
 @extends('admin.viewUser')
 @section('content')
-<h1 class=" btn text-left bg-info"><a href="/users/show" class="text-white"> quay lại trang user</a></h1>
+@foreach( $user as $user)
+@if($user->cap_bac == 'qt')
+<h1 class=" btn text-left bg-info"><a href="{{ asset('') }}users/quantri" class="text-white"> quay lại trang user</a></h1>
+@else
+<h1 class=" btn text-left bg-info"><a href="{{ asset('') }}users/show" class="text-white"> quay lại trang user</a></h1>
+@endif
 
 @if(count($errors) > 0)
     <div class="alert-danger alert">
@@ -14,7 +19,7 @@
         {{ session('section') }}
     </div>
 @endif
-@foreach( $user as $user)
+
 <h2 class="text-info">{{ $user->name }}</h2>
 <form action="users/update/{{ $user->id }}" method="post">
 	@method('PATCH')

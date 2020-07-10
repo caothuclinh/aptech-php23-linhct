@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use App\User;
+
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -12,13 +15,13 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         //
-        $fake = Faker\factory::create();
-        for($i=0;i<10;i++){
+        $faker = Faker\Factory::create();
+        for($i=0;$i<10;$i++){
         	User::create(
         		[
-        				'name' => $fake->name(),
-        				'email' => $fake->email(),
-        				'pass' => bcrypt('matkhau')
+        			'name' =>$faker->name(),
+        			'email' =>$faker->email(),
+        			'pass' =>md5('123456789')
         		]
         	);
         }

@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent;
+use SoftDeletes;
 
 class UserController extends Controller
 {
@@ -16,9 +16,19 @@ class UserController extends Controller
     public function index()
     {
         //
-        $users = User::all();
+        $users = User::where('id','>',0)->paginate(5);
         return view('admin.show',['users' => $users]);
     }
+    public function getNhanVien()
+    {
+        $users = User::where('cap_bac','<>','qt')->paginate(5);
+        return view('admin.show',['users' => $users]);
+    }
+    public function getQuanTri()
+        {
+            $users = User::where('cap_bac','qt')->paginate(5);
+            return view('admin.show_qt',['users' => $users]);
+        }
 
     /**
      * Show the form for creating a new resource.
@@ -154,12 +164,10 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
         //
-        $user = User::find($id);
-        // dd($user);
-        $user->delete();
+        User::destroy($user->id);
         return redirect()->action('UserController@index')->with('section','da xoa thanh cong');
     }
 }

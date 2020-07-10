@@ -1,6 +1,6 @@
 @extends('admin.viewUser')
 @section('content')
-<h1 class=" btn text-left bg-info"><a href="/users/show" class="text-white"> quay lại trang user</a></h1>
+<h1 class=" btn text-left bg-info"><a href="{{ asset('') }}users/show" class="text-white"> quay lại trang user</a></h1>
 @if(count($errors) > 0)
     <div class="alert-danger alert">
         @foreach($errors->all() as $err)
