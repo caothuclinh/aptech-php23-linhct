@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;
+
+}
+.container .row a{
+	text-decoration: none!important;
+}
+table tr th{
+	text-align: center;
+	color: darkred!important;
+}
+table tr td{
+ color: white!important;
+}
+.blogs p{
+	color: #bdbdbd;
+	font-size: 22px;
+}
+.blogs h2{
+	color: white;
+}
+.blogs img{
+	float: right;
+	height: 300px;
+}
+
