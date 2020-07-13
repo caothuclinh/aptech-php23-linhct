@@ -36,18 +36,6 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-         // dd($request->noidung);
-        $create = new Blog;
-        $create->tieude = $request->tieude;
-        $create->mota_ngan = $request->mota;
-        $create->noidung = $request->noidung;
-        $create->save();
-        return redirect()->back()->with('thongbao','thêm mới bài viết thành công');
-    }
-
     /**
      * Display the specified resource.
      *
@@ -67,6 +55,18 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
+    public function store(Request $request)
+    {
+        //
+         // dd($request->noidung);
+        $create = new Blog;
+        $create->tieude = $request->tieude;
+        $create->mota_ngan = $request->mota;
+        $create->noidung = $request->noidung;
+        $create->save();
+        return redirect()->back()->with('thongbao','thêm mới bài viết thành công');
+    }
+
     public function edit(Blog $blog)
     {
         //

@@ -37,5 +37,16 @@ Route::group(['prefix' =>'admin'],function(){
 		Route::get('them-moi-bai-viet','BlogController@create')->name('blogs.create');
 		Route::PATCH('them-moi-bai-viet','BlogController@store')->name('blogs.store');
  	});
+ 		// trang san pham / products
+ 	route::group(['prefix' => 'products'],function(){
+		Route::get('trang-chu','ProductController@index')->name('products.index');
+		Route::get('chi-tiet-san-pham/{product}','ProductController@show')->name('products.show');
+		Route::get('sua-thong-tin-san-pham/{product}','ProductController@edit')->name('products.edit');
+		Route::PUT('sua-thong-tin-san-pham/{product}','ProductController@update')->name('products.update');
+		Route::DELETE('xoa-mot-san-pham/{product}','ProductController@destroy')->name('products.delete');
+		Route::get('them-moi-mot-san-pham','ProductController@create')->name('products.create');
+		Route::PATCH('them-moi-mot-san-pham','ProductController@store')->name('products.store');
+ 	});
+ 	
 });
 
