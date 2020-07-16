@@ -17,7 +17,7 @@ class ArticleController extends Controller
     public function index()
     {
         //
-        $articles = Article::all();
+        $articles = Article::paginate(5);
         return view('articles.show',['articles' =>$articles]);
     }
 
@@ -74,7 +74,8 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         //
-        $blog = Article::find($article->id);
+        $article = Article::find($article->id);
+
         return view('articles.edit',['article' => $article]);
     }
 
@@ -107,6 +108,6 @@ class ArticleController extends Controller
     {
         //
         Article::destroy($article->id);
-        return redirect()->back()->with('thongbao','xóa bài viết thành công');
+        return redirect()->route('articles.index')->with('thongbao','xóa bài viết thành công');
     }
 }

@@ -1,6 +1,23 @@
 @extends('layout.master')
-@section('content')
 
+@section('content')
+<table class="table table-inverse">
+	
+	<tbody>
+		<tr>
+			<td>
+				<a href="{{ route('articles.edit',$article->id) }}" class="btn btn-danger btn-block">edit</a>
+			</td>
+			<td>
+				<form action="{{ route('articles.delete',$article->id) }}" method= "post">
+					@method("DELETE")
+					@csrf
+					<button class="btn btn-warning btn-block" type="submit">delete</button>
+				</form>
+			</td>
+		</tr>
+	</tbody>
+</table>
 <div class="container article text-white">
 	<div class="row ">
 		<div class="col">

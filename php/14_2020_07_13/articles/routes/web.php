@@ -22,6 +22,7 @@ Route::get('chi-tiet-bai-viet/{article}','ArticleController@show')->name('articl
 Route::get('them-moi-bai-viet','ArticleController@create')->name('articles.create');
 Route::PATCH('them-moi-bai-viet','ArticleController@store')->name('articles.store');
 Route::DELETE('xoa-bai-viet/{article}','ArticleController@destroy')->name('articles.delete');
-// Route::get('sua-bai-viet/{article}','ArticleController@store')->name('articles.edit');
-// Route::PUT('sua-bai-viet/{article}','ArticleController@store')->name('articles.update');
+
+Route::get('sua-bai-viet/{article}','ArticleController@edit')->name('articles.edit');
+Route::PUT('sua-bai-viet/{article}','ArticleController@store')->name('articles.update');
 
