@@ -14,11 +14,12 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Article $article)
     {
         //
         $articles = Article::paginate(5);
-        return view('articles.show',['articles' =>$articles]);
+        // dd($articles);
+        return view('articles.show',['articles' => $articles]);
     }
 
    /**
@@ -104,10 +105,20 @@ class ArticleController extends Controller
      * @param  \App\Articlelog  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy(Request $request, Article $article)
     {
         //
-        Article::destroy($article->id);
+        Article::where('id',$article->id)->delete();
         return redirect()->route('articles.index')->with('thongbao','xóa bài viết thành công');
     }
+    public function restore(){
+        $delete = Article::onlyTrashed()->get();
+        // dd($delete);
+        return view('articles.store',['articles' => $delete]);
+    }
+    public function restored(Article $article){
+        dd(Article::withTrashed()->get());
+        Article::withTrashed()->where('id',$article->id)->restore();
+        return redirect()->route('articles.restore')->with('thongbao','khôi phục thành công');
+}
 }

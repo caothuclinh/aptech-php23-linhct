@@ -21,6 +21,7 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="text-center">Dự án bài viết bằng laravel</h1>
+				<h2><a href="{{ route('articles.restore') }}" class="btn btn-primary">restore</a></h2>
 				<h2><a href="{{ route('articles.index') }}">trang chu</a></h2>
 				@if(Route::currentRouteName() != 'articles.create')
 				<div><a href="{{ route('articles.create') }}" class="btn btn-info">them moi bai viet</a></div>

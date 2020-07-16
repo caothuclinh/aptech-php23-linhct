@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +24,8 @@ Route::DELETE('xoa-bai-viet/{article}','ArticleController@destroy')->name('artic
 
 Route::get('sua-bai-viet/{article}','ArticleController@edit')->name('articles.edit');
 Route::PUT('sua-bai-viet/{article}','ArticleController@store')->name('articles.update');
+Route::get('restore-bai-viet','ArticleController@restore')->name('articles.restore');
+Route::POST('restore-bai-viet/{article}','ArticleController@restored')->name('articles.stored_at');
+
+
 

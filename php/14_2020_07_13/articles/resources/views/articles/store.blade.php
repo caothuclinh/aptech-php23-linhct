@@ -15,6 +15,8 @@
 				<div class="col-4">
 					<div class="card text-center">
 						<div class="card-body">
+							<h3>bài số {{ $i }}</h3>
+							<p>id bài viết: {{ $article->id }}</p>
 							<h4 class="card-title">{{ $article->title }}</h4>
 							<p style="font-weight: bold;" class=" text-primary">{{ $article->slug }}</p>
 							<p class="card-text">{{ $article->description }}</p>
@@ -24,16 +26,10 @@
 							<table>
 								<tr>
 									<td>
-										<a class="btn btn-info btn-block" href="{{ route('articles.show',$article->id) }}">show</a>
-									</td>
-									<td>
-										<a href="{{ route('articles.edit',$article->id) }}" class="btn btn-danger btn-block">edit</a>
-									</td>
-									<td>
-										<form action="{{ route('articles.delete',$article->id) }}" method= "post">
-											@method("DELETE")
+										<form action="{{ route('articles.stored_at',$article->id) }}" method="post">
+											@method('POST')
 											@csrf
-											<button class="btn btn-warning btn-block" type="submit">delete</button>
+											<button type="submit" class="btn btn-info">store</button>
 										</form>
 									</td>
 								</tr>
@@ -47,6 +43,5 @@
 				@endforeach
 
 		</div>
-	<div class="row">{{ $articles->links() }}</div>
 	</div>
 @endsection

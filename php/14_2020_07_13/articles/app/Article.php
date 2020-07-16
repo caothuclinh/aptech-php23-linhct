@@ -3,8 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Article extends Model
 {
     //
+    use SoftDeletes;
+    // use Notifiable,SoftDeletes;// add soft delete
 }
