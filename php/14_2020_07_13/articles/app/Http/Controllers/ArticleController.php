@@ -65,7 +65,6 @@ class ArticleController extends Controller
         $create = new Article;
         $create->title = $request->title;
         $create->slug = Str::slug($request->title, '-');
-
         $create->description = $request->description;
         $create->content = $request->content;
         $create->save();

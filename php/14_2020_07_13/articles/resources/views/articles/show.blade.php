@@ -4,7 +4,7 @@
 @if(Session::has('thongbao'))
 	<div class="alert alert-success"> {{ Session::get('thongbao') }} </div>
 @endif
-{{-- <div class="row display-3">có tất cả {{ count($articles) }} bài viết</div> --}}
+<div class="row display-3">có tất cả {{ count($articles) }} bài viết</div>
 	<?php $i = 0;?>
 	
 
